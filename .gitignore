@@ -4,9 +4,9 @@ Temp
 *.csproj
 *.sln
 *.pdb
-Library/*
+ChickenShooter/Library/*
 *.DS_Store
-obj/*
-Logs/*
-Builds/*
-Output/*
+ChickenShooter/obj/*
+ChickenShooter/Logs/*
+ChickenShooter/Builds/*
+ChickenShooter/Output/*
