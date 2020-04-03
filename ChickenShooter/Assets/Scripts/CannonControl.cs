@@ -7,6 +7,9 @@ public class CannonControl : MonoBehaviour
     public float minRotation = -30.0f;
     public float maxRotation = 45.0f;
 
+    public Transform    shootPoint;
+    public GameObject   projectilePrefab;
+
     Camera mainCamera;
 
     void Start()
@@ -50,6 +53,12 @@ public class CannonControl : MonoBehaviour
 
         // VERSÃO AINDA MAIS COMPLICADA, QUE TEM CLAMPING
         RotateToUsingClamping(toCursor);
+
+        // DISPARAR
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Fire();
+        }
     }
 
     void RotateTo(Vector3 direction)
@@ -98,5 +107,10 @@ public class CannonControl : MonoBehaviour
         upwards = Vector3.Cross(forward, direction);
 
         transform.rotation = Quaternion.LookRotation(forward, upwards);*/
+    }
+
+    void Fire()
+    {
+        Instantiate(projectilePrefab, shootPoint.position, shootPoint.rotation);
     }
 }

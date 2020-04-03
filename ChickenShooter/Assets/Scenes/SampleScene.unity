@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 129612668}
   - component: {fileID: 129612667}
   - component: {fileID: 129612669}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TankCannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.5, y: 60.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 214632934}
   m_Father: {fileID: 572966835}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -215,6 +216,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRotation: -30
   maxRotation: 45
+  shootPoint: {fileID: 214632934}
+  projectilePrefab: {fileID: 4723206563315996664, guid: d647dc2dfcd8d134382fe9287910ff10,
+    type: 3}
+--- !u!1 &214632933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 214632934}
+  m_Layer: 8
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &214632934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214632933}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 87.2, y: 25.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 129612668}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &358969994
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +425,7 @@ GameObject:
   - component: {fileID: 572966836}
   - component: {fileID: 572966837}
   - component: {fileID: 572966838}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
